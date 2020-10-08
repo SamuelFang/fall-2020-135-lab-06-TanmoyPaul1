@@ -16,6 +16,7 @@ TEST_CASE("Task B: encryptCaesar")
 }
 TEST_CASE("Task C: encryptVigenere")
 {
+    CHECK(encryptViginere("aaa", "aaabbb") == "aaa");
     CHECK(encryptViginere("abcde", "b") == "bcdef");
     CHECK(encryptViginere("ABCDE", "c") == "CDEFG");
     CHECK(encryptViginere("aAaAa", "abcde") == "aBcDe");
@@ -31,7 +32,8 @@ TEST_CASE("Task D: decryptCaesar")
 }
 TEST_CASE("Task D: decryptViginere")
 {
-    CHECK(decryptViginere("bcdef", "bb") == "abcde");
+    CHECK(decryptViginere("aaa", "aaabbb") == "aaa");
+    CHECK(decryptViginere("bcdef", "b") == "abcde");
     CHECK(decryptViginere("CDEFG", "c") == "ABCDE");
     CHECK(decryptViginere("aBcDe", "abcde") == "aAaAa");
     CHECK(decryptViginere("Jevpq, Wyvnd!", "cake") == "Hello, World!");
