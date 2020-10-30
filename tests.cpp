@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "viginere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 //add your tests here
 TEST_CASE("Task B: encryptCaesar")
@@ -37,4 +38,11 @@ TEST_CASE("Task D: decryptViginere")
     CHECK(decryptViginere("CDEFG", "c") == "ABCDE");
     CHECK(decryptViginere("aBcDe", "abcde") == "aAaAa");
     CHECK(decryptViginere("Jevpq, Wyvnd!", "cake") == "Hello, World!");
+}
+TEST_CASE("decode")
+{
+    CHECK(decodeCaesar("Validation") == "validation");
+    CHECK(decodeCaesar("Afqnifynts") == "Validation");
+    CHECK(decodeCaesar("Hello") == "hello");
+    CHECK(decodeCaesar("Ifmmp") == "hello");
 }
