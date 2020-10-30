@@ -6,11 +6,7 @@
 
 * GitHub username: TanmoyPaul1
 
-* Notes: I used Shaun's repository to guide me because I couldn't figure 
-some of the functions out. The code should have worked, but it seems to 
-only work for words shifted by 0. I checked everything 100s of times but
-I just can't see anything wrong with it. Sorry :(
-
+* Notes: I used Shaun's repository to guide me because I couldn't figure some of the functions out. The code should have worked, but it seems to only work for words shifted by 0. I checked everything 100s of times but I just can’t see anything wrong with it. Sorry :(
 
   
 * General instructions:
