@@ -6,6 +6,13 @@
 #include <vector>
 #include <algorithm>
 
+/*
+    Editor: Tommy Liang
+    Name: Tanmoy Paul
+
+    Removed unnecessary open and close brackets when using a for loop or if loop with only one argument
+*/
+
 std::string decodeCaesar(std::string encryptedString)
 {
     double alphabetFreq[] = {8.2, 1.5, 2.8, 4.3, 13, 2.2, 
@@ -44,21 +51,15 @@ std::string decodeCaesar(std::string encryptedString)
         // rotates the frequencies
         std::rotate(freqs.begin(), freqs.end() - i, freqs.end());
         for (int j = 0; j < 25; j++)
-        {
             // adds all the frequencies in the current frequency rotation
             sum += pow(alphabetFreq[j] - freqs[j], 2);
-        }
         distance[i] = sqrt(sum);
         // std::cout << distance[i] << std::endl;
         sum = 0;
     }
     int smallestIndex = 0;
     for (int i = 0; i < 25; i++)
-    {
         if (distance[i] < distance[smallestIndex])
-        {
             smallestIndex = i;
-        }
-    }
     return tests[smallestIndex];
 }
